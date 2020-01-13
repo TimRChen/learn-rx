@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>rx.js demo html</title>
+    <style>
+      /* #print-box {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .btn {
+        width: 100px;
+        height: 40px;
+      } */
+
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      .box {
+        width: 40px;
+        height: 40px;
+        background-color: orangered;
+        transform: translate(10px, 10px);
+        /* transition: 0.05s transform ease-out; */
+        cursor: pointer;
+        position: absolute;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div id="print-box">
+      <div class="text"></div>
+      <button class="btn">original</button>
+    </div> -->
+    <!-- <script src="src/index.js"></script> -->
+    <div class="head-box">
+      <div class="box"></div>
+      <div class="box" style="background-color:orchid; z-index: 1"></div>
+      <div class="box" style="background-color:palegreen; z-index: -1"></div>
+      <div class="box" style="background-color:papayawhip; z-index: -2"></div>
+      <div class="box" style="background-color:royalblue; z-index: -3"></div>
+      <div class="box" style="background-color:salmon; z-index: -4"></div>
+      <div class="box" style="background-color:sienna; z-index: -5"></div>
+      <div class="box" style="background-color:aqua; z-index: -6"></div>
+    </div>
+
+    <script src="src/drag.js"></script>
+  </body>
+</html>
