@@ -16,6 +16,7 @@ const mouseMove$ = fromEvent(document, "mousemove");
 const mouseUp$ = fromEvent(document, "mouseup");
 
 const boxes$ = from([...boxes]);
+// 使用zip拉链配对推出数据，以boxes$数据size为推出结束标志
 const delayBoxes$ = zip(boxes$, interval(100)).pipe(
   map(list => list.shift())
 );
