@@ -1,11 +1,5 @@
 import { fromEvent, from, interval, zip } from "rxjs";
-import {
-  map,
-  switchMap,
-  takeUntil,
-  mergeMap,
-  tap,
-} from "rxjs/operators";
+import { map, switchMap, takeUntil, mergeMap, tap } from "rxjs/operators";
 import { setTranslate, getTranslate } from "./utils";
 
 const headBox = document.querySelector(".head-box");
@@ -17,9 +11,7 @@ const mouseUp$ = fromEvent(document, "mouseup");
 
 const boxes$ = from([...boxes]);
 // 使用zip拉链配对推出数据，以boxes$数据size为推出结束标志
-const delayBoxes$ = zip(boxes$, interval(100)).pipe(
-  map(list => list.shift())
-);
+const delayBoxes$ = zip(boxes$, interval(100)).pipe(map(list => list.shift()));
 
 mouseDown$
   .pipe(

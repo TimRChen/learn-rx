@@ -2,9 +2,9 @@
   "name": "currying",
   "version": "1.0.0",
   "description": "",
-  "main": "currying.js",
+  "main": "run.js",
   "scripts": {
-    "dev": "parcel rx.html",
+    "dev": "node run.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -13,6 +13,7 @@
     "rxjs": "^6.5.3"
   },
   "devDependencies": {
+    "inquirer": "^7.0.3",
     "parcel": "^1.12.4"
   }
 }
